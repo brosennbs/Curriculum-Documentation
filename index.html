@@ -192,10 +192,10 @@ function openModal(c){
       const item=document.createElement('div'); item.className='unit-item';
       const hasBody=u.concepts||u.skills||u.timeframe||u.assessments||u.materials;
       const header=document.createElement('div');
-      header.className='unit-header'+(i===0?' open':'');
-      header.innerHTML='<span class="unit-name">'+esc(u.name)+'</span>'+(hasBody?'<span class="unit-chevron">'+(i===0?'▲':'▼')+'</span>':'');
+      header.className='unit-header';
+      header.innerHTML='<span class="unit-name">'+esc(u.name)+'</span>'+(hasBody?'<span class="unit-chevron">▼</span>':'');
       const body=document.createElement('div');
-      body.className='unit-body'+(i===0?' open':'');
+      body.className='unit-body';
       let bh='';
       if(u.concepts)    bh+='<div class="unit-field"><div class="unit-field-label">Key Concepts</div><div class="unit-field-value">'+esc(u.concepts)+'</div></div>';
       if(u.skills)      bh+='<div class="unit-field"><div class="unit-field-label">Key Skills</div><div class="unit-field-value">'+esc(u.skills)+'</div></div>';
